@@ -1,0 +1,231 @@
+[
+    {
+      "_id": "1",
+      "brand_name": "Daraz Bangladesh",
+      "rating": 4.5,
+      "description": "Bangladesh's leading online shopping platform for all categories.",
+      "brand_logo": "https://example.com/logos/daraz.png",
+      "shop_link": "https://www.daraz.com.bd",
+      "category": "E-commerce",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "DARAZ20",
+          "description": "20% off on electronics",
+          "expiry_date": "2024-12-31",
+          "condition": "Maximum discount BDT 500",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "brand_name": "Pickaboo",
+      "rating": 4.7,
+      "description": "Premium destination for authentic gadgets and electronics.",
+      "brand_logo": "https://example.com/logos/pickaboo.png",
+      "shop_link": "https://www.pickaboo.com",
+      "category": "Electronics",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "PKB100",
+          "description": "BDT 100 off on orders above BDT 1,000",
+          "expiry_date": "2024-11-30",
+          "condition": "Applicable on all items",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "3",
+      "brand_name": "AjkerDeal",
+      "rating": 4.2,
+      "description": "Bangladesh’s trusted platform for deals and discounts.",
+      "brand_logo": "https://example.com/logos/ajkerdeal.png",
+      "shop_link": "https://www.ajkerdeal.com",
+      "category": "E-commerce",
+      "isSaleOn": false,
+      "coupons": [
+        {
+          "coupon_code": "AJK500",
+          "description": "Save BDT 500 on orders over BDT 2,500",
+          "expiry_date": "2024-12-15",
+          "condition": "Selected items only",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "4",
+      "brand_name": "Bagdoom",
+      "rating": 4.3,
+      "description": "Trendy fashion and lifestyle products at your fingertips.",
+      "brand_logo": "https://example.com/logos/bagdoom.png",
+      "shop_link": "https://www.bagdoom.com",
+      "category": "Fashion",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "BDOOM15",
+          "description": "15% off on all clothing items",
+          "expiry_date": "2024-12-20",
+          "condition": "Minimum purchase of BDT 1,000",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "5",
+      "brand_name": "Othoba",
+      "rating": 4.4,
+      "description": "Reliable e-commerce platform for daily essentials and more.",
+      "brand_logo": "https://example.com/logos/othoba.png",
+      "shop_link": "https://www.othoba.com",
+      "category": "General Store",
+      "isSaleOn": false,
+      "coupons": [
+        {
+          "coupon_code": "OTHO10",
+          "description": "10% cashback on groceries",
+          "expiry_date": "2024-11-25",
+          "condition": "Maximum cashback BDT 300",
+          "coupon_type": "Cashback"
+        }
+      ]
+    },
+    {
+      "_id": "6",
+      "brand_name": "PriyoShop",
+      "rating": 4.5,
+      "description": "Bangladeshi online shopping platform for genuine products.",
+      "brand_logo": "https://example.com/logos/priyoshop.png",
+      "shop_link": "https://www.priyoshop.com",
+      "category": "E-commerce",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "PRIYO500",
+          "description": "BDT 500 off on orders above BDT 3,000",
+          "expiry_date": "2024-12-01",
+          "condition": "Selected items only",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "7",
+      "brand_name": "Rokomari",
+      "rating": 4.8,
+      "description": "The ultimate online bookstore in Bangladesh.",
+      "brand_logo": "https://example.com/logos/rokomari.png",
+      "shop_link": "https://www.rokomari.com",
+      "category": "Books",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "READ10",
+          "description": "10% off on all books",
+          "expiry_date": "2024-11-30",
+          "condition": "Minimum purchase of BDT 500",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "8",
+      "brand_name": "Chaldal",
+      "rating": 4.6,
+      "description": "Groceries delivered to your doorstep in no time.",
+      "brand_logo": "https://example.com/logos/chaldal.png",
+      "shop_link": "https://www.chaldal.com",
+      "category": "Groceries",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "CHAL20",
+          "description": "20% off on first orders",
+          "expiry_date": "2024-12-05",
+          "condition": "Maximum discount BDT 200",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "9",
+      "brand_name": "Evaly",
+      "rating": 4.1,
+      "description": "All-in-one platform for great deals and offers.",
+      "brand_logo": "https://example.com/logos/evaly.png",
+      "shop_link": "https://www.evaly.com.bd",
+      "category": "E-commerce",
+      "isSaleOn": false,
+      "coupons": [
+        {
+          "coupon_code": "EVALY100",
+          "description": "BDT 100 off on any order",
+          "expiry_date": "2024-11-30",
+          "condition": "Minimum purchase of BDT 1,000",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "10",
+      "brand_name": "Khaas Food",
+      "rating": 4.7,
+      "description": "Organic and fresh food items delivered to your home.",
+      "brand_logo": "https://example.com/logos/khaasfood.png",
+      "shop_link": "https://www.khaasfood.com",
+      "category": "Organic Food",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "KHAAS15",
+          "description": "15% off on honey products",
+          "expiry_date": "2024-12-10",
+          "condition": "No minimum purchase required",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "11",
+      "brand_name": "PriyoFood",
+      "rating": 4.2,
+      "description": "E-commerce for fresh and organic food items.",
+      "brand_logo": "https://example.com/logos/priyofood.png",
+      "shop_link": "https://www.priyofood.com",
+      "category": "Food",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "FOOD20",
+          "description": "20% off on all food items",
+          "expiry_date": "2024-11-20",
+          "condition": "Min purchase of BDT 800",
+          "coupon_type": "Discount"
+        }
+      ]
+    },
+    {
+      "_id": "12",
+      "brand_name": "Bohubrihi",
+      "rating": 4.5,
+      "description": "Online education platform for professionals and learners.",
+      "brand_logo": "https://example.com/logos/bohubrihi.png",
+      "shop_link": "https://www.bohubrihi.com",
+      "category": "Education",
+      "isSaleOn": true,
+      "coupons": [
+        {
+          "coupon_code": "LEARN25",
+          "description": "25% off",
+          "expiry_date": "2024-12",
+          "condition": "None",
+          "coupon_type": "Discount"
+        }
+      ]
+    }
+  ]
+  
