@@ -1,24 +1,38 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../assets/Add a heading.jpg'
+import logo from '../assets/discount_pro_logo.png'
+import { FaHome } from "react-icons/fa";
+import { BsFillGrid1X2Fill, BsFillPersonLinesFill } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
 const Navbar = () => {
   const navbarLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/home">
+          <FaHome /> Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/brands">Brands</NavLink>
+        <NavLink to="/brands">
+          <BsFillGrid1X2Fill />
+          Brands
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/profile">My-Profile</NavLink>
+        <NavLink to="/profile">
+          <CgProfile />
+          My-Profile
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/About">About-Dev</NavLink>
+        <NavLink to="/about">
+          <BsFillPersonLinesFill />
+          About-Dev
+        </NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar *:text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,20 +53,23 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="bg-[#7AB2D3] menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {navbarLinks}
           </ul>
         </div>
-        <Link className=" btn btn-ghost text-xl">
-          <img className="w-20 h-20" src={logo} alt="" />
+        <Link to="/" className=" btn btn-ghost text-xl" >
+          <img className="w-20" src={logo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navbarLinks}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end ">
+        <div className="flex justify-center items-center gap-3">
+          <a className="btn text-[#DFF2EB] bg-blue-400 border-none">Log In</a>
+          <a className="btn text-[#DFF2EB] bg-blue-400 border-none">Register</a>
+        </div>
       </div>
     </div>
   );
