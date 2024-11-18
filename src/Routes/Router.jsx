@@ -18,7 +18,8 @@ const router = createBrowserRouter([
         },
         {
           path:'/brands',
-          element:<Brands/>
+          element:<Brands/>,
+          loader:()=> fetch('/discount.json')
         },
         {
           path:'/profile',

@@ -15,6 +15,20 @@
         "expiry_date": "2024-12-31",
         "condition": "Maximum discount BDT 500",
         "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "DARAZNEW50",
+        "description": "Flat 50% off for new users",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for first order only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "DARAZBD100",
+        "description": "BDT 100 off on orders above BDT 1,000",
+        "expiry_date": "2024-12-15",
+        "condition": "Applicable on all categories",
+        "coupon_type": "Discount"
       }
     ]
   },
@@ -34,6 +48,20 @@
         "expiry_date": "2024-11-30",
         "condition": "Applicable on all items",
         "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "PKBOO50",
+        "description": "Flat 50% off on mobile accessories",
+        "expiry_date": "2024-12-10",
+        "condition": "Minimum purchase BDT 2,000",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "PKBFREEDEL",
+        "description": "Free delivery on all orders",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase BDT 500",
+        "coupon_type": "Free Delivery"
       }
     ]
   },
@@ -53,6 +81,13 @@
         "expiry_date": "2024-12-15",
         "condition": "Selected items only",
         "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "AJK50",
+        "description": "Flat 50% discount on selected fashion items",
+        "expiry_date": "2024-12-31",
+        "condition": "No minimum order required",
+        "coupon_type": "Discount"
       }
     ]
   },
@@ -71,6 +106,20 @@
         "description": "15% off on all clothing items",
         "expiry_date": "2024-12-20",
         "condition": "Minimum purchase of BDT 1,000",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BDOOM500",
+        "description": "Save BDT 500 on lifestyle products",
+        "expiry_date": "2024-12-10",
+        "condition": "Orders above BDT 3,000 only",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "BDOOM20",
+        "description": "Flat 20% off on selected footwear",
+        "expiry_date": "2024-12-31",
+        "condition": "No minimum order required",
         "coupon_type": "Discount"
       }
     ]
@@ -129,6 +178,13 @@
         "expiry_date": "2024-11-30",
         "condition": "Minimum purchase of BDT 500",
         "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "READFREEDEL",
+        "description": "Free delivery on educational books",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of BDT 800",
+        "coupon_type": "Free Delivery"
       }
     ]
   },
@@ -147,6 +203,13 @@
         "description": "20% off on first orders",
         "expiry_date": "2024-12-05",
         "condition": "Maximum discount BDT 200",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "CHAL300",
+        "description": "Save BDT 300 on groceries",
+        "expiry_date": "2024-12-15",
+        "condition": "Orders above BDT 2,000",
         "coupon_type": "Discount"
       }
     ]
