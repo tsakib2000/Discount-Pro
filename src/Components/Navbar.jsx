@@ -7,7 +7,7 @@ const Navbar = () => {
   const navbarLinks = (
     <>
       <li>
-        <NavLink to="/home">
+        <NavLink to="/">
           <FaHome /> Home
         </NavLink>
       </li>
@@ -32,7 +32,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar *:text-white">
+    <div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,8 +58,8 @@ const Navbar = () => {
             {navbarLinks}
           </ul>
         </div>
-        <Link to="/" className=" btn btn-ghost text-xl" >
-          <img className="w-20" src={logo} alt="" />
+        <Link to="/" className=" btn btn-ghost text-xl italic" >
+          DISCOUNT PRO
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
