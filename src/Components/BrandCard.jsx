@@ -1,13 +1,14 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const BrandCard = ({ brandCard }) => {
   useEffect(() => {
     Aos.init();
   }, []);
-  console.log(brandCard);
-  const { brand_name, rating, description, brand_logo, shop_link, category,isSaleOn } =
+  
+  const { _id,brand_name, rating, description, brand_logo, shop_link, category,isSaleOn } =
     brandCard;
   return (
     <div
@@ -66,7 +67,7 @@ const BrandCard = ({ brandCard }) => {
 
       <div className="flex flex-col justify-start gap-10 items-center">
         <div >
-            <button className="btn">View Coupon</button>
+            <Link to={`/brand/${_id}`}  className="btn">View Coupon</Link>
         </div>
     {
         isSaleOn && <div className="animate-bounce italic text-red-600"><h1 className="text-3xl font-bold">Sale Is On</h1></div>

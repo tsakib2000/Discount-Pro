@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Brands from "../pages/Brands";
 import MyProfile from "../pages/MyProfile";
 import About from "../pages/About";
+import BrandDetails from "../pages/BrandDetails";
 
 
 
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         {
           path:'/about',
           element:<About/>
+        },
+        {
+          path:'/brand/:id',
+          element:<BrandDetails/>,
+          loader:()=>fetch('/discount.json')
         }
 
       ]

@@ -4,28 +4,29 @@ import { FaHome } from "react-icons/fa";
 import { BsFillGrid1X2Fill, BsFillPersonLinesFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 
+
 const Navbar = () => {
   const navbarLinks = (
     <>
       <li>
-        <NavLink to="/">
+        <NavLink to="/" className={({isActive})=> isActive? 'bg-blue-400 text-white' : ''}>
           <FaHome /> Home
         </NavLink>
       </li>
       <li>
-        <NavLink to="/brands">
+        <NavLink to="/brands" className={({isActive})=> isActive? 'bg-blue-400 text-white' : ''}>
           <BsFillGrid1X2Fill />
           Brands
         </NavLink>
       </li>
       <li>
-        <NavLink to="/profile">
+        <NavLink to="/profile" className={({isActive})=> isActive? 'bg-blue-400 text-white' : ''}>
           <CgProfile />
           My-Profile
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about">
+        <NavLink to="/about" className={({isActive})=> isActive? 'bg-blue-400 text-white' : ''}>
           <BsFillPersonLinesFill />
           About-Dev
         </NavLink>
@@ -35,7 +36,7 @@ const Navbar = () => {
   return (
  <>
 
-    <div className="navbar ">
+    <div className="navbar *:text-blue-400 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

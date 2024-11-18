@@ -7,7 +7,7 @@ import Footer from '../Components/Footer';
 import WelcomeText from './../Components/WelcomeText';
 const Root = () => {
   const {pathname} = useLocation()
-  console.log(location);
+
     return (
       <div className='md:w-11/12 mx-auto  '>
          <div>

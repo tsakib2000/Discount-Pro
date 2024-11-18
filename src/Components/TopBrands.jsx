@@ -12,12 +12,12 @@ const TopBrands = () => {
   }, []);
   return (
     <div>
-      <h1 className="text-center text-3xl font-bold">Top Brands</h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+      <h1 className="text-center text-3xl font-bold">Top Picks for Smart Shopping</h1>
+      {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
         {brands.slice(0, 4)?.map((brand) => (
           <BrandData key={brand._id} brand={brand} />
         ))}
-      </div>
+      </div> */}
       <Marquee direction="right" pauseOnHover >
         <div className="border flex gap-5 justify-center items-center h-44 my-4 overflow-hidden shadow-lg">
             {

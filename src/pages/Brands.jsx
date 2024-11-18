@@ -4,7 +4,7 @@ import BrandCard from "../Components/BrandCard";
 
 const Brands = () => {
     const data = useLoaderData();
-    console.log(data);
+   
     return ( <>
         <div className=" bg-banner p-9  space-y-4">
                 <div className="text-center space-y-4">
@@ -31,7 +31,7 @@ const Brands = () => {
         
         <div>
             {
-                data.map(brand=> <BrandCard brandCard={brand}/>)
+                data.map(brand=> <BrandCard key={brand._id} brandCard={brand}/>)
             }
         </div>
         </>
