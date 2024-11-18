@@ -3,6 +3,7 @@ import logo from '../assets/discount_pro_logo.png'
 import { FaHome } from "react-icons/fa";
 import { BsFillGrid1X2Fill, BsFillPersonLinesFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+
 const Navbar = () => {
   const navbarLinks = (
     <>
@@ -32,6 +33,8 @@ const Navbar = () => {
     </>
   );
   return (
+ <>
+
     <div className="navbar ">
       <div className="navbar-start">
         <div className="dropdown">
@@ -71,7 +74,7 @@ const Navbar = () => {
           <a className="btn text-[#DFF2EB] bg-blue-400 border-none">Register</a>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 
