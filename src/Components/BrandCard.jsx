@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -8,7 +9,7 @@ const BrandCard = ({ brandCard }) => {
     Aos.init();
   }, []);
   
-  const { _id,brand_name, rating, description, brand_logo, shop_link, category,isSaleOn } =
+  const { _id,brand_name, rating, description, brand_logo,isSaleOn } =
     brandCard;
   return (
     <div

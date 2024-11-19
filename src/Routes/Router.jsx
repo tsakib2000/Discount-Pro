@@ -5,6 +5,9 @@ import Brands from "../pages/Brands";
 import MyProfile from "../pages/MyProfile";
 import About from "../pages/About";
 import BrandDetails from "../pages/BrandDetails";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Login from "../pages/Login";
+import Register from "../pages/register";
 
 
 
@@ -24,7 +27,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/profile',
-          element:<MyProfile/>
+          element:<PrivateRoute><MyProfile/></PrivateRoute>
         },
         {
           path:'/about',
@@ -32,12 +35,21 @@ const router = createBrowserRouter([
         },
         {
           path:'/brand/:id',
-          element:<BrandDetails/>,
+          element:<PrivateRoute><BrandDetails/></PrivateRoute>,
           loader:()=>fetch('/discount.json')
+        },
+    
+        {
+          path:'/login',
+          element:<Login/>
+        },
+        {
+          path:'/register',
+          element:<Register/>
         }
-
       ]
-    },
+    }
+
   ]);
 
   export default router
