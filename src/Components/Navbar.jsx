@@ -95,9 +95,10 @@ const Navbar = () => {
         <div className="navbar-end ">
           <div className="flex justify-center items-center gap-3">
             {user ? (
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col-reverse md:flex-row items-center gap-3">
                 <div><div className="skeleton p-4 flex items-center  h-4 w-max bg-blue-400 text-white font-semibold">{user.email || user.displayName}</div></div>
-                <div className="avatar">
+            <div className="flex gap-3">
+            <div className="avatar">
                   <div className="w-14 ring-4 rounded-full">
                     <img src={user.photoURL} />
                   </div>
@@ -108,6 +109,7 @@ const Navbar = () => {
                 >
                   Logout
                 </button>
+            </div>
               </div>
             ) : (
               <>
