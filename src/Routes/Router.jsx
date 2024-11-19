@@ -8,6 +8,7 @@ import BrandDetails from "../pages/BrandDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Login from "../pages/Login";
 import Register from "../pages/register";
+import ErrorPage from "../pages/ErrorPage";
 
 
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     {
       path: "/",
       element:<Root/>,
+      errorElement:<ErrorPage/>,
       children:[
         {
           path:'/',

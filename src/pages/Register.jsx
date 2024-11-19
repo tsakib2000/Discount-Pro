@@ -86,10 +86,10 @@ const googleLogIn=()=>{
 </div>
 <div className="form-control mt-6">
   <button className="btn bg-blue-400 border-none text-white">Register</button>
-  <div className="divider">or</div>
+  <div className="divider divider-info text-white font-semibold">OR</div>
   <div onClick={googleLogIn} type="button" className="btn bg-blue-400 border-none flex justify-center items-center text-white"><img className="h-10" src={google} alt="" /> Register With Google</div>
 </div>
-<p className="text-sm  text-white font-bold"> All ready have account?<Link to='/login'> Log in now</Link></p>
+<p className="text-sm text-center text-white font-bold"> All ready have account?<Link to='/login'> Log in now</Link></p>
 </form>
 </div>
 
