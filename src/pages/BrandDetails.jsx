@@ -6,26 +6,20 @@ import { useEffect, useState } from "react";
 const BrandDetails = () => {
   const data = useLoaderData();
   const [brandDetails, setBrandDetails] = useState(data);
-  const [loading, setLoading] = useState(true);
+
   
 
   const { id } = useParams();
   useEffect(() => {
-    const fetchBrandDetails = async () => {
-      setLoading(true);
+    
+      
       const singleBrandDetails = data?.find((brand) => brand._id == id);
       setBrandDetails(singleBrandDetails);
-      setLoading(false); 
-    };
-
-    fetchBrandDetails();
+ 
+    
   }, [data, id]);
   const { brand_name , rating, brand_logo, coupons,shop_link } = brandDetails;
-  if(loading){
-    <div className="flex justify-center items-center h-screen">
-  <span className="loading loading-spinner loading-lg"></span>
-  </div>
-  }
+
   
   return (
     <div>
