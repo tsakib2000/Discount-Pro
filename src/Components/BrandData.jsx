@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Aos from 'aos'
 import 'aos/dist/aos.css' 
 import { useEffect } from 'react';
@@ -6,7 +7,7 @@ const BrandData = ({brand}) => {
 useEffect(()=>{
     Aos.init();
 },[])
-    const{brand_name,rating,description,brand_logo,shop_link,category}=brand
+    const{brand_name,rating,description,brand_logo,category}=brand
     return (
         <div data-aos='fade-up' className="card  h-[342px]  shadow-xl p-1">
         <figure>

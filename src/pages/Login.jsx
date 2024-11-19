@@ -20,7 +20,8 @@ const Login = () => {
     })
   };
   return (
-    <div className="bg-banner h-screen flex justify-center items-center ">
+    <div className="bg-banner  flex flex-col justify-center items-center p-10  ">
+        <h1 className="text-white font-bold text-4xl mb-5">Register Now </h1>
       <div className="card  backdrop-blur-md w-full max-w-sm shrink-0 shadow-2xl border border-blue-400 ">
         <form className="card-body" onSubmit={handleLogIn}>
           <div className="form-control ">

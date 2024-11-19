@@ -2,9 +2,9 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
-
+import google from '../assets/7123025_logo_google_g_icon.png'
 const Register = () => {
-    const{handleRegister,setUser,updateUserProfile}=useContext(AuthContext)
+    const{handleRegister,setUser,updateUserProfile,signWithGoogle}=useContext(AuthContext)
     const[error,setError]=useState('')
     const navigate=useNavigate()
     const upperCase =/^(?=.*[A-Z]).*$/;
@@ -41,7 +41,15 @@ if(!length.test(password)){
         toast.error(error.message)
        })
     }
-
+const googleLogIn=()=>{
+    signWithGoogle()
+    .then(result=>{
+        setUser(result.user)
+        console.log(result.user.photoURL);
+        navigate('/')
+        toast.success('Register successfull')
+    })
+}
     return (
         <div className="bg-banner flex flex-col justify-center items-center p-10 ">
             <h1 className="text-white font-bold text-4xl mb-5">Register Now </h1>
@@ -77,7 +85,9 @@ if(!length.test(password)){
 
 </div>
 <div className="form-control mt-6">
-  <button className="btn bg-blue-400 border-none">Register</button>
+  <button className="btn bg-blue-400 border-none text-white">Register</button>
+  <div className="divider">or</div>
+  <div onClick={googleLogIn} type="button" className="btn bg-blue-400 border-none flex justify-center items-center text-white"><img className="h-10" src={google} alt="" /> Register With Google</div>
 </div>
 <p className="text-sm  text-white font-bold"> All ready have account?<Link to='/login'> Log in now</Link></p>
 </form>
