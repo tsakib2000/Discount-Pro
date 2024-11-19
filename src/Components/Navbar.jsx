@@ -1,11 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../assets/discount_pro_logo.png'
+
 import { FaHome } from "react-icons/fa";
 import { BsFillGrid1X2Fill, BsFillPersonLinesFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
+  const {user,handleSignOut}=useContext(AuthContext)
   const navbarLinks = (
     <>
       <li>
@@ -71,8 +74,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-end ">
         <div className="flex justify-center items-center gap-3">
-          <a className="btn text-[#DFF2EB] bg-blue-400 border-none">Log In</a>
-          <a className="btn text-[#DFF2EB] bg-blue-400 border-none">Register</a>
+        {
+          user ? <div className="flex gap-3"> <img className="h-20" src={user.photoURL} alt="" /> <button onClick={handleSignOut}  className="btn text-[#DFF2EB] bg-blue-400 border-none">Logout</button> </div>: <>  <Link to='/login' className="btn text-[#DFF2EB] bg-blue-400 border-none">Log In</Link>
+          <Link to='/register' className="btn text-[#DFF2EB] bg-blue-400 border-none">Register</Link></>
+        }
         </div>
       </div>
     </div></>
