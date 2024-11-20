@@ -32,7 +32,7 @@ const Coupon = ({ coupon,shop_link }) => {
        {coupon_code}
         </p>
         <div className="card-actions justify-between mt-4 ">
-          <div className="flex gap-4">
+          <div className="flex md:flex-col lg:flex-row gap-4">
             <CopyToClipboard text={coupon_code}>
               <button
                 onClick={() => toast.success("Coupon Code Copied")}

@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
 import { FaHome } from "react-icons/fa";
-import { BsFillGrid1X2Fill, BsFillPersonLinesFill } from "react-icons/bs";
+import { BsFillGrid1X2Fill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -44,17 +44,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       )}
-      <li>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? "bg-blue-400 text-white" : ""
-          }
-        >
-          <BsFillPersonLinesFill />
-          About-Dev
-        </NavLink>
-      </li>
+ 
     </>
   );
   return (
@@ -96,7 +86,7 @@ const Navbar = () => {
           <div className="flex justify-center items-center gap-3">
             {user ? (
               <div className="flex flex-col-reverse md:flex-row items-center gap-3">
-                <div><div className="skeleton p-4 flex items-center  h-4 w-max bg-blue-400 text-white font-semibold">{user.email || user.displayName}</div></div>
+                <div><div className="skeleton p-4 flex items-center text-sm  h-4 w-max bg-blue-400 text-white font-semibold">{user.email || user.displayName}</div></div>
             <div className="flex gap-3">
             <div className="avatar">
                   <div className="w-14 ring-4 rounded-full">

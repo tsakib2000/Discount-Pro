@@ -4,7 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import google from '../assets/7123025_logo_google_g_icon.png'
 const Login = () => {
-  const { signInUser ,setUser,signWithGoogle} = useContext(AuthContext);
+  const { signInUser ,setUser,signWithGoogle,setEmail} = useContext(AuthContext);
 const location=useLocation()
 const navigate=useNavigate()
 
@@ -20,7 +20,7 @@ const navigate=useNavigate()
         toast.success(result.user.email,'login successful')
     })
     .catch(error=>{
-        console(error.message)
+        console.log(error.message)
         toast.error(error.message)
     })
   };
@@ -28,7 +28,7 @@ const navigate=useNavigate()
     signWithGoogle()
     .then(result=>{
         setUser(result.user)
-        
+        console.log(result.user);
         navigate(location?.state ? location?.state : '/')
         toast.success('Login successful')
     })
@@ -47,6 +47,7 @@ const navigate=useNavigate()
               type="email"
               placeholder="email"
               className="input input-bordered"
+              onChange={(e)=>setEmail(e.target.value)}
               required
             />
           </div>
@@ -63,12 +64,12 @@ const navigate=useNavigate()
               required
             />
             <label className="label">
-              <a
-                href="#"
+              <Link
+                to='/forgot'
                 className="label-text-alt  link-hover text-white font-semibold"
               >
                 Forgot password?
-              </a>
+              </Link>
             </label>
           </div>
           <div className="form-control mt-6">

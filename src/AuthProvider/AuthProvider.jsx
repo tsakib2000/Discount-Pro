@@ -2,13 +2,14 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import auth from './../Firebase/firebase.config';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 
 export const AuthContext=createContext()
 
 const AuthProvider = ({children}) => {
   const [loading,setLoading]=useState(true)
   const[user,setUser]=useState(null)
+  const[email,setEmail]=useState('')
   const googleProvider = new GoogleAuthProvider();
 const handleRegister=(email,password)=>{
   setLoading(true)
@@ -26,6 +27,9 @@ const handleSignOut=()=>{
 const signWithGoogle=()=>{
   return signInWithPopup(auth,googleProvider)
 }
+const passwordReset =(email)=>{
+return sendPasswordResetEmail(auth,email)
+}
 useEffect(()=>{
   const unSubscribed = onAuthStateChanged(auth,currentUser=>{
     setLoading(false)
@@ -35,9 +39,8 @@ setUser(currentUser)
     unSubscribed()
   }
 },[])
-console.log(user)
+console.log(email)
     const authInfo ={
-        name:'sakib',
         handleRegister,
         user,
         loading,
@@ -45,8 +48,11 @@ console.log(user)
         signInUser,
         setUser,
         updateUserProfile,
-        signWithGoogle
-    }
+        signWithGoogle,
+        email,
+        setEmail,
+        passwordReset
+          }
     return (
   <AuthContext.Provider value={authInfo}>
 {children}
