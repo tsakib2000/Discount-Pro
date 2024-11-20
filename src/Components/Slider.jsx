@@ -2,6 +2,10 @@ import slide1 from '../assets/markus-spiske-WIpNUhklTQg-unsplash.jpg'
 import slide2 from '../assets/chuttersnap-I6bic_J8YYw-unsplash.jpg'
 import slide3 from '../assets/tamanna-rumee-lpGm415q9JA-unsplash.jpg'
 import slide4 from '../assets/jon-cellier-RUsVVa57VPI-unsplash.jpg'
+
+
+
+
 const Slider = () => {
     return (
       <>
@@ -43,6 +47,7 @@ const Slider = () => {
     </div>
   </div>
 </div>
+
       </>
 
     );

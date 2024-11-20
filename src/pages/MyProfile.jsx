@@ -6,7 +6,7 @@ import banner from '../assets/Snow.svg'
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div style={{ backgroundImage: `url(${banner})` }} className=" h-screen p-8">
+    <div style={{ backgroundImage: `url(${banner})` }} className=" p-10">
       <div className="flex justify-center items-center"></div>
       <div className="flex gap-6 flex-col items-center h-full w-full justify-center ">
         <div className="text-center">
@@ -18,10 +18,10 @@ const MyProfile = () => {
           </h1>
         </div>
         <div className="">
-          <div className="*:text-white shadow-xl w-full rounded-lg py-3 backdrop-blur-lg border border-blue-300">
+          <div className="*:text-white shadow-xl w-full rounded-lg py-3 backdrop-blur-lg border p-4 border-blue-300">
             <div className="photo-wrapper p-2 ">
               <img
-                className="w-40 h-40 rounded-full mx-auto ring ring-blue-400"
+                className="w-32 h-32 rounded-full mx-auto ring ring-blue-400"
                 src={user?.photoURL}
                 alt={user?.displayName}
               />

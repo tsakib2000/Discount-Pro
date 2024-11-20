@@ -84,7 +84,7 @@ const navigate=useNavigate()
           <div className="form-control mt-6">
             <button className="btn bg-blue-400 border-none text-white">Login</button>
             <div className="divider divider-info text-white font-semibold">OR</div>
-            <div onClick={googleLogIn} type="button" className="btn bg-blue-400 border-none flex justify-center items-center text-white"><img className="h-10" src={google} alt="" /> Register With Google</div>
+            <div onClick={googleLogIn} type="button" className="btn bg-blue-400 border-none flex justify-center items-center text-white"><img className="h-10" src={google} alt="" />Log in With Google</div>
           </div>
           <p className="text-sm text-center text-white font-bold">
             Don`t have account?<Link to="/register"> Register here</Link>
