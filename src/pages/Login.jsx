@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { FaEye,FaEyeSlash } from "react-icons/fa";
 import google from '../assets/7123025_logo_google_g_icon.png'
 const Login = () => {
   const { signInUser ,setUser,signWithGoogle,setEmail} = useContext(AuthContext);
+  const [toggle,setToggle]=useState(false)
 const location=useLocation()
 const navigate=useNavigate()
 
@@ -33,6 +35,9 @@ const navigate=useNavigate()
         toast.success('Login successful')
     })
   }
+  const handlePasswordToggle=()=>{
+    setToggle(!toggle)
+  }
   return (
     <div className="bg-banner  flex flex-col justify-center items-center p-10  ">
         <h1 className="text-white font-bold text-4xl mb-5">Login Now </h1>
@@ -57,12 +62,15 @@ const navigate=useNavigate()
                 Password
               </span>
             </label>
-            <input name="password"
-              type="password"
+       <label className="w-full relative">
+       <input name="password"
+              type={toggle?'text':"password"}
               placeholder="password"
-              className="input input-bordered"
+              className="input input-bordered w-full"
               required
             />
+          <button onClick={handlePasswordToggle} type="button" className=" absolute right-4 top-1/3">{toggle? <FaEyeSlash /> :<FaEye  />}</button>
+       </label>
             <label className="label">
               <Link
                 to='/forgot'
