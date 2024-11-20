@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
-
+import banner from '../assets/Snow.svg'
 
 const ForgotPassword = () => {
-    const {email,passwordReset}=useContext(AuthContext)
+    const {email,passwordReset,handleSignOut}=useContext(AuthContext)
 
     const handleResetPassword =(e)=>{
         e.preventDefault()
@@ -13,11 +13,12 @@ const ForgotPassword = () => {
      .then(()=>{
         toast.success('Password Reset Email sent')
         window.open('https://mail.google.com/', "_blank", "noopener,noreferrer")
+        handleSignOut()
      })
     
     }
     return (
-        <div className="bg-banner h-screen flex justify-center items-center gap-8 flex-col">
+        <div style={{ backgroundImage: `url(${banner})` }} className=" h-screen flex justify-center items-center gap-8 flex-col">
             <div>
                 <h1 className="text-2xl md:text-4xl text-white font-bold">Lost Your Key? Let’s Find It!</h1>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Slider from '../Components/Slider';
 import TopBrands from '../Components/TopBrands';
 import BrandsOnSale from '../Components/BrandsOnSale';

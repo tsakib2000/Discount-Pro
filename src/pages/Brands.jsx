@@ -1,12 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import BrandCard from "../Components/BrandCard";
-
+import banner from '../assets/Snow.svg'
 
 const Brands = () => {
     const data = useLoaderData();
    
     return ( <>
-        <div className=" bg-banner p-9  space-y-4">
+        <div style={{ backgroundImage: `url(${banner})` }} className=" p-9  space-y-4">
                 <div className="text-center space-y-4">
                 <h1 className="text-4xl text-white font-bold">Brands</h1>
                 <p className="text-white font-semibold">Discover exclusive deals from your favorite brands here.</p>
@@ -29,7 +29,7 @@ const Brands = () => {
 
         </div>
         
-        <div>
+        <div className="space-y-4 mt-4">
             {
                 data.map(brand=> <BrandCard key={brand._id} brandCard={brand}/>)
             }

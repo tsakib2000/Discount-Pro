@@ -3,6 +3,7 @@ import { CiMail,CiLink } from "react-icons/ci";
 import { FiExternalLink } from "react-icons/fi";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import banner from '../assets/Snow.svg'
 const UpdateProfile = () => {
     const {updateUserProfile}=useContext(AuthContext)
     const navigate=useNavigate();
@@ -15,7 +16,7 @@ navigate('/profile')
         e.target.reset()
     }
   return (
-    <div className="bg-banner h-screen flex justify-center items-center">
+    <div style={{ backgroundImage: `url(${banner})` }} className=" h-screen flex justify-center items-center">
       <div className="card  backdrop-blur-md w-full max-w-sm shrink-0 shadow-2xl border border-blue-400 ">
         <form className="card-body" onSubmit={handleUpdate}>
           <label className="input input-bordered flex items-center gap-2">

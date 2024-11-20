@@ -6,7 +6,7 @@ import MyProfile from "../pages/MyProfile";
 import BrandDetails from "../pages/BrandDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Login from "../pages/Login";
-import Register from "../pages/register";
+import Register from "../pages/Register";
 import ErrorPage from "../pages/ErrorPage";
 import ForgotPassword from "../pages/ForgotPassword";
 import UpdateProfile from "../pages/UpdateProfile";
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/updateProfile',
-        element:<UpdateProfile/>
+        element:<PrivateRoute><UpdateProfile/></PrivateRoute>
       }
     ],
   },

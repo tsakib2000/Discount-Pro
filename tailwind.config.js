@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage:{
-        'banner':"url('./src/assets/Snow.svg')"
-      }
     },
   },
   plugins: [

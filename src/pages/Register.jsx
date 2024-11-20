@@ -3,9 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import google from '../assets/7123025_logo_google_g_icon.png'
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import banner from '../assets/Snow.svg'
 const Register = () => {
     const{handleRegister,setUser,updateUserProfile,signWithGoogle}=useContext(AuthContext)
     const[error,setError]=useState('')
+   const [showPassword,setShowPassword]=useState(false)
     const navigate=useNavigate()
     const upperCase =/^(?=.*[A-Z]).*$/;
     const lowerCase=/^(?=.*[a-z]).*$/;
@@ -45,13 +48,18 @@ const googleLogIn=()=>{
     signWithGoogle()
     .then(result=>{
         setUser(result.user)
-        console.log(result.user.photoURL);
+        
         navigate('/')
         toast.success('Register successfull')
     })
 }
+
+const handleShowPassword=()=>{
+  return setShowPassword(!showPassword)
+}
+
     return (
-        <div className="bg-banner flex flex-col justify-center items-center p-10 ">
+        <div style={{ backgroundImage: `url(${banner})` }} className=" flex flex-col justify-center items-center p-10 ">
             <h1 className="text-white font-bold text-4xl mb-5">Register Now </h1>
         <div className=" card backdrop-blur-md w-full max-w-sm  shadow-2xl border border-blue-400 ">
 
@@ -74,15 +82,16 @@ const googleLogIn=()=>{
   </label>
   <input  name='email' type="email" placeholder="Email" className="bg-blue-200 placeholder:text-white input input-bordered" required />
 </div>
-<div className="form-control">
-  <label className="label">
+<div className="form-control relative">
+  <label className="label ">
     <span className="label-text text-white font-semibold">Password</span>
+    
   </label>
-  <input  name='password'  type="password" placeholder="password" className="bg-blue-200 placeholder:text-white input input-bordered" required />
+  <input  name='password'  type={showPassword?'text':'password'} placeholder="password" className="bg-blue-200 placeholder:text-white input input-bordered" required />
   {
     error && <p className="text-red-600 italic text-sm py-2">⚠️ {error}</p>
   }
-
+<button onClick={handleShowPassword} type="button" className=" absolute right-4 top-2/3">{showPassword? <FaEyeSlash /> :<FaEye  />}</button>
 </div>
 <div className="form-control mt-6">
   <button className="btn bg-blue-400 border-none text-white">Register</button>

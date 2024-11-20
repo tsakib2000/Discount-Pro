@@ -39,7 +39,7 @@ setUser(currentUser)
     unSubscribed()
   }
 },[])
-console.log(email)
+
     const authInfo ={
         handleRegister,
         user,

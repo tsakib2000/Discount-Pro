@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import google from '../assets/7123025_logo_google_g_icon.png'
+import banner from '../assets/Snow.svg'
 const Login = () => {
   const { signInUser ,setUser,signWithGoogle,setEmail} = useContext(AuthContext);
   const [toggle,setToggle]=useState(false)
@@ -22,7 +23,7 @@ const navigate=useNavigate()
         toast.success(result.user.email,'login successful')
     })
     .catch(error=>{
-        console.log(error.message)
+        
         toast.error(error.message)
     })
   };
@@ -30,7 +31,7 @@ const navigate=useNavigate()
     signWithGoogle()
     .then(result=>{
         setUser(result.user)
-        console.log(result.user);
+        
         navigate(location?.state ? location?.state : '/')
         toast.success('Login successful')
     })
@@ -39,7 +40,7 @@ const navigate=useNavigate()
     setToggle(!toggle)
   }
   return (
-    <div className="bg-banner  flex flex-col justify-center items-center p-10  ">
+    <div style={{ backgroundImage: `url(${banner})` }} className=" flex flex-col justify-center items-center p-10  ">
         <h1 className="text-white font-bold text-4xl mb-5">Login Now </h1>
       <div className="card  backdrop-blur-md w-full max-w-sm shrink-0 shadow-2xl border border-blue-400 ">
         <form className="card-body" onSubmit={handleLogIn}>

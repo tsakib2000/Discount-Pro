@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { MdEmail,MdUpdate } from "react-icons/md";
 import { Link } from "react-router-dom";
+import banner from '../assets/Snow.svg'
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
   return (
-    <div className="bg-banner h-screen p-8">
+    <div style={{ backgroundImage: `url(${banner})` }} className=" h-screen p-8">
       <div className="flex justify-center items-center"></div>
       <div className="flex gap-6 flex-col items-center h-full w-full justify-center ">
         <div className="text-center">
