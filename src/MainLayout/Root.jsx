@@ -1,18 +1,20 @@
 
 import Navbar from '../Components/Navbar';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import  { Toaster } from 'react-hot-toast';
 
 import WelcomeText from './../Components/WelcomeText';
+import { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 const Root = () => {
-  const {pathname} = useLocation()
 
+const {user}=useContext(AuthContext)
     return (
       <div className='md:w-11/12 mx-auto  '>
          <div>
 {
- pathname== '/' &&  <WelcomeText/>
+ user && <WelcomeText/>
 }
  </div>
         <Navbar/>

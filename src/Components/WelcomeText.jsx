@@ -12,13 +12,11 @@ const WelcomeText = () => {
         Your ultimate destination for the best deals and exclusive coupons from
         Bangladesh&apos;s top e-commerce platforms. 🛒
       </p>
-     
-        {
-          user &&<div className="p-4 flex items-center  h-4 w-max bg-blue-400 text-white font-semibold">
+         <div className="p-4 flex items-center  h-4 w-max bg-blue-400 text-white font-semibold">
           <p>{ user.displayName}</p>
           </div>
         
-        }
+       
    
     </div>
   );
