@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import google from '../assets/7123025_logo_google_g_icon.png'
 import banner from '../assets/Snow.svg'
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { signInUser ,setUser,signWithGoogle,setEmail} = useContext(AuthContext);
   const [toggle,setToggle]=useState(false)
@@ -39,7 +40,10 @@ const navigate=useNavigate()
   const handlePasswordToggle=()=>{
     setToggle(!toggle)
   }
-  return (
+  return (<>
+  <Helmet>
+    <title>LogIn</title>
+  </Helmet>
     <div style={{ backgroundImage: `url(${banner})` }} className=" flex flex-col justify-center items-center p-10  ">
         <h1 className="text-white font-bold text-4xl mb-5">Login Now </h1>
       <div className="card  backdrop-blur-md w-full max-w-sm shrink-0 shadow-2xl border border-blue-400 ">
@@ -92,6 +96,7 @@ const navigate=useNavigate()
         </form>
       </div>
     </div>
+    </>
   );
 };
 

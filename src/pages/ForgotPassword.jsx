@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
 import banner from '../assets/Snow.svg'
+import { Helmet } from "react-helmet-async";
 
 const ForgotPassword = () => {
     const {email,passwordReset,handleSignOut}=useContext(AuthContext)
@@ -19,6 +20,9 @@ const ForgotPassword = () => {
     }
     return (
         <div style={{ backgroundImage: `url(${banner})` }} className=" h-screen flex justify-center items-center gap-8 flex-col">
+                    <Helmet>
+    <title>Reset Password</title>
+  </Helmet>
             <div>
                 <h1 className="text-2xl md:text-4xl text-white font-bold">Lost Your Key? Let’s Find It!</h1>
             </div>

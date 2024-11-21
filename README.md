@@ -59,7 +59,8 @@ The purpose of this website is to help users save money by providing a centraliz
 5. **react-icons**  
    - A library for integrating popular icons into React applications. It provides a wide variety of icons from multiple libraries (such as FontAwesome, Material Design, etc.), making it easy to add vector-based icons to the project.
 
-
+6. **React Helmet Async**  
+   - A powerful library for managing the document head (meta tags, title, etc.) in a React application. Essential for improving SEO and controlling the page's metadata dynamically.
 # 🚀 Live Demo
 ## Live link: [Discount-Pro](https://vagabond-horn.surge.sh/)
 ## requirement link: [Requirement](https://docs.google.com/document/d/1Ueydif7eXywT6rCkp2lF1Q85DjxgaNpQ60w5HDEIG8Y/edit?tab=t.0)

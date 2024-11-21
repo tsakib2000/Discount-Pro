@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import BrandCard from "../Components/BrandCard";
 import banner from '../assets/Snow.svg'
+import { Helmet } from "react-helmet-async";
 
 const Brands = () => {
     const data = useLoaderData();
    
     return ( <>
+             <Helmet>
+    <title>Brands</title>
+  </Helmet>
         <div style={{ backgroundImage: `url(${banner})` }} className=" p-9  space-y-4">
                 <div className="text-center space-y-4">
                 <h1 className="text-4xl text-white font-bold">Brands</h1>

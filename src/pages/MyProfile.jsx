@@ -3,10 +3,14 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { MdEmail,MdUpdate } from "react-icons/md";
 import { Link } from "react-router-dom";
 import banner from '../assets/Snow.svg'
+import { Helmet } from "react-helmet-async";
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
   return (
     <div style={{ backgroundImage: `url(${banner})` }} className=" p-10">
+               <Helmet>
+    <title>Profile</title>
+  </Helmet>
       <div className="flex justify-center items-center"></div>
       <div className="flex gap-6 flex-col items-center h-full w-full justify-center ">
         <div className="text-center">

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import google from '../assets/7123025_logo_google_g_icon.png'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import banner from '../assets/Snow.svg'
+import { Helmet } from "react-helmet-async";
 const Register = () => {
     const{handleRegister,setUser,updateUserProfile,signWithGoogle}=useContext(AuthContext)
     const[error,setError]=useState('')
@@ -58,8 +59,12 @@ const handleShowPassword=()=>{
   return setShowPassword(!showPassword)
 }
 
-    return (
+    return (<>
+             <Helmet>
+    <title>Register</title>
+  </Helmet>
         <div style={{ backgroundImage: `url(${banner})` }} className=" flex flex-col justify-center items-center p-10 ">
+ 
             <h1 className="text-white font-bold text-4xl mb-5">Register Now </h1>
         <div className=" card backdrop-blur-md w-full max-w-sm  shadow-2xl border border-blue-400 ">
 
@@ -103,6 +108,7 @@ const handleShowPassword=()=>{
 </div>
 
 </div>
+</>
     );
 };
 

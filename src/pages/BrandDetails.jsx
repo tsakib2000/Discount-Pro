@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Coupon from "../Components/Coupon";
 import bg from "../assets/Snow.svg";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 const BrandDetails = () => {
   const data = useLoaderData();
   const [brandDetails, setBrandDetails] = useState(data);
@@ -23,6 +24,9 @@ const BrandDetails = () => {
   
   return (
     <div>
+               <Helmet>
+    <title>Details</title>
+  </Helmet>
       <div
         style={{ backgroundImage: `url(${bg})` }}
         className=" p-9  space-y-4 flex flex-col justify-center items-center"
