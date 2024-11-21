@@ -14,7 +14,7 @@ const MyProfile = () => {
             Welcome,{user?.displayName}!{" "}
           </h1>
           <h1 className="text-white  text-2xl md:text-4xl font-bold">
-            Stay cool and explore your profile. 😊✨
+            Stay cool and explore your profile.
           </h1>
         </div>
         <div className="">

@@ -62,7 +62,7 @@ const BrandDetails = () => {
         </div>
       </div>
       <div className="text-center my-6">
-        <h1 >Latest Deals and Promo Codes</h1>
+        <h1 className="tex-2xl md:text-4xl font-bold" >Latest Deals and Promo Codes</h1>
       </div>
       <div className="grid md:grid-cols-3 gap-4 my-4">
         {coupons?.map((coupon, idx) => (

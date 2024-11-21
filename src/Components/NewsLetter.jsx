@@ -18,7 +18,7 @@ const NewsLetter = () => {
         </h3>
         <div className="flex">
         <label className="input input-bordered flex items-center gap-2 rounded-r-none">
-  <input type="email" className="grow" placeholder="Enter your email" />
+  <input type="email" className="grow text-black" placeholder="Enter your email" />
 
 </label>
 <button className="btn rounded-l-none bg-blue-400 border-none text-white">Subscribe</button>

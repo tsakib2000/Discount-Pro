@@ -23,8 +23,8 @@ const navigate=useNavigate()
         toast.success(result.user.email,'login successful')
     })
     .catch(error=>{
-        
-        toast.error(error.message)
+      const showError=(error.message.split('/')[1].slice(0,18));
+        toast.error(showError)
     })
   };
   const googleLogIn=()=>{
