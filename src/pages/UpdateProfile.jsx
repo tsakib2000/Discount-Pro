@@ -16,7 +16,8 @@ navigate('/profile')
         e.target.reset()
     }
   return (
-    <div style={{ backgroundImage: `url(${banner})` }} className=" h-screen flex justify-center items-center">
+    <div style={{ backgroundImage: `url(${banner})` }} className=" p-10 flex flex-col gap-3 justify-center items-center">
+      <h1 className="text-center font-bold text-2xl md:text-4xl text-white">Update Your Information</h1>
       <div className="card  backdrop-blur-md w-full max-w-sm shrink-0 shadow-2xl border border-blue-400 ">
         <form className="card-body" onSubmit={handleUpdate}>
           <label className="input input-bordered flex items-center gap-2">

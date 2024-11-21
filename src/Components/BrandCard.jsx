@@ -14,7 +14,7 @@ const BrandCard = ({ brandCard }) => {
   return (
     <div
       data-aos="zoom-in-up"
-      className="flex flex-col md:flex-row items-start justify-between border  rounded-2xl p-4"
+      className="flex flex-col md:flex-row items-start justify-between border mx-1 rounded-2xl p-4"
     >
       <div className="space-y-5">
         <div className="w-max h-16 ">

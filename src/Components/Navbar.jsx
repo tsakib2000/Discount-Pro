@@ -75,7 +75,7 @@ const Navbar = () => {
               {navbarLinks}
             </ul>
           </div>
-          <Link to="/" className=" btn btn-ghost text-xl italic">
+          <Link to="/" className="logo btn btn-ghost text-xl italic font-black">
             DISCOUNT PRO
           </Link>
         </div>

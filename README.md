@@ -62,7 +62,7 @@ The purpose of this website is to help users save money by providing a centraliz
 
 # 🚀 Live Demo
 ## Live link: [Discount-Pro](https://vagabond-horn.surge.sh/)
-## requirement link: [Requirment](https://docs.google.com/document/d/1Ueydif7eXywT6rCkp2lF1Q85DjxgaNpQ60w5HDEIG8Y/edit?tab=t.0)
+## requirement link: [Requirement](https://docs.google.com/document/d/1Ueydif7eXywT6rCkp2lF1Q85DjxgaNpQ60w5HDEIG8Y/edit?tab=t.0)
 
 
 

@@ -10,7 +10,7 @@ const HowItWorks = () => {
     <div>
         <h1 className="text-center text-2xl md:text-3xl font-bold">Why Choose us</h1>
     </div>
-       <div className="grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-4">
+       <div className="grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-4 mx-1">
       <HowItWorkCard
         title={"Find Your Favorite Stores"}
         description={
