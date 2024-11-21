@@ -21,7 +21,7 @@ const TopBrands = () => {
       <Marquee direction="right" pauseOnHover >
         <div className="border flex gap-5 justify-center items-center md:h-44 my-4 overflow-hidden shadow-lg">
             {
-                brands?.map(brand=> <Link to='/brands' key={brand._id}><img className="h-24" src={brand.brand_logo}></img></Link>)
+                brands?.map(brand=> <Link to={`/brand/${brand._id}`} key={brand._id}><img className="h-24" src={brand.brand_logo}></img></Link>)
             }
         </div>
       </Marquee>

@@ -11,7 +11,7 @@ const Footer = () => {
     window.open("https://x.com/TAUHIDULIS10407", "_blank")
   }
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 bg-transparent *:font-semibold">
+    <footer className="*:text-blue-400 footer footer-center bg-base-200 text-base-content rounded p-10 bg-transparent *:font-semibold">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About Me</a>
         <a className="link link-hover">Contact</a>
