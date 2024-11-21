@@ -22,7 +22,7 @@ const SaleCard = ({ brand }) => {
         <h2 className="card-title">{brand_name}</h2>
         <p className="font-semibold">Available Coupons: {coupons.length}</p>
         <div className="card-actions">
-          <div className="bg-blue-400 p-3 rounded-2xl font-semibold">
+          <div className="bg-blue-400 text-white p-3 rounded-2xl font-semibold">
             <p>{category}</p>
           </div>
         </div>

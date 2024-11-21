@@ -1,11 +1,14 @@
 import banner from "../assets/Snow.svg";
 import { CiMail } from "react-icons/ci";
 const NewsLetter = () => {
-  return (
+  return (<>
+      <h1 className="text-center text-2xl md:text-3xl font-bold mb-4">Stay Updated with the Best Deals!</h1>
     <div
       style={{ backgroundImage: `url(${banner})` }}
       className="text-white p-10"
     >
+      <div>
+      </div>
       <div className="text-center flex flex-col justify-center items-center gap-4">
         <h1 className="text-5xl text-blue-400">
         <CiMail />
@@ -22,6 +25,7 @@ const NewsLetter = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
