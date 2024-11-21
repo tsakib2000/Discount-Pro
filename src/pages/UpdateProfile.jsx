@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { CiMail,CiLink } from "react-icons/ci";
+import { CiLink } from "react-icons/ci";
+import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { FiExternalLink } from "react-icons/fi";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +26,7 @@ navigate('/profile')
       <div className="card  backdrop-blur-md w-full max-w-sm shrink-0 shadow-2xl border border-blue-400 ">
         <form className="card-body" onSubmit={handleUpdate}>
           <label className="input input-bordered flex items-center gap-2">
-          <CiMail />
+          <MdOutlineDriveFileRenameOutline />
             <input name='name' type="text" className="grow" placeholder="Name" required />
           </label>
           <label className="input input-bordered flex items-center gap-2">
